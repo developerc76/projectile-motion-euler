@@ -78,7 +78,6 @@ def createGraph(h, g, m, k, vi, angle, dt, endtime, time, dist):
     ay = g-k*vx/m
     ax = -k*vx/m
     while time <= endtime:
-        print(f"Time (s): {time}; Y-Acceleration (m/s^2): {ay}; Y-Velocity (m/s): {vy}; Height (m): {h}; X-Acceleration (m/s^2): {ax}; X-Velocity (m/s): {vx}; Range (m): {dist}")
         hdata.append(h)
         ddata.append(dist)        
         timelist.append(time)
