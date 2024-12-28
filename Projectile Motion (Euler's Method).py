@@ -71,6 +71,8 @@ def printMethod(h, g, m, k, vi, angle, dt, endtime, time, dist):
         # Plus Delta Time
         time += dt
         time = round(float(time), 3)
+
+    print("-------------GRAPH-SUMMARY----------------")
     minheight = closest_to_zero(hdata)
     indexforminheight = hdata.index(minheight)
     print(f"Max Height: {max(hdata)}")
@@ -81,7 +83,7 @@ def printMethod(h, g, m, k, vi, angle, dt, endtime, time, dist):
 
 
 def createGraph(h, g, m, k, vi, angle, dt, endtime, time, dist):
-    "The Graph Window will exit on-click."
+    print("The Graph Window will exit on-click.")
     # calculate initial x and y velocity
     vy = math.sin(math.radians(angle)) * vi
     vx = math.cos(math.radians(angle)) * vi
@@ -109,6 +111,7 @@ def createGraph(h, g, m, k, vi, angle, dt, endtime, time, dist):
         time = round(float(time), 3)
     print("Range (m) is the x-axis. Height (m) is the y-axis.")
     setupGraph()
+    print("-------------GRAPH-SUMMARY----------------")
     minheight = closest_to_zero(hdata)
     indexforminheight = hdata.index(minheight)
     print(f"Max Height: {max(hdata)}")
@@ -141,7 +144,6 @@ def euler():
         printMethod(h, g, m, k, vi, angle, dt, endtime, time, dist)
     else:
         print("Rerun program and make (Y/n) = Y, y, N, or n")
-    t
 
 
 def main():
