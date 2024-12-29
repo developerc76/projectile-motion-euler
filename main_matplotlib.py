@@ -4,21 +4,31 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def euler():
-    # calculate initial x and y velocity
+def closest_to_zero(nums):
+    li = []
+    for num in nums:
+        li.append(abs(num))
+    for num in nums:
+        if abs(num) == min(li):
+            return num
+
+
+def euler(h, g, m, k, vi, angle, dt, endtime, graph, time, dist):
     vy = math.sin(math.radians(angle)) * vi
     vx = math.cos(math.radians(angle)) * vi
-    hdata = []
-    ddata = []
+    xlist = []
+    ylist = []
     timelist = []
     ay = g - k * vx / m
     ax = -k * vx / m
+
     while time <= endtime:
-        print(
-            f"Time (s): {time}; Y-Acceleration (m/s^2): {ay}; Y-Velocity (m/s): {vy}; Height (m): {h}; X-Acceleration (m/s^2): {ax}; X-Velocity (m/s): {vx}; Range (m): {dist}"
-        )
-        hdata.append(h)
-        ddata.append(dist)
+        if not graph:
+            print(
+                f"Time (s): {time}; Y-Acceleration (m/s^2): {ay}; Y-Velocity (m/s): {vy}; Height (m): {h}; X-Acceleration (m/s^2): {ax}; X-Velocity (m/s): {vx}; Range (m): {dist}"
+            )
+        ylist.append(h)
+        xlist.append(dist)
         timelist.append(time)
         # Y-Components: Accel (gravity), Height, Velocity
         ay = g - k * vy / m
@@ -31,14 +41,18 @@ def euler():
         # Plus Delta Time
         time += dt
         time = round(float(time), 3)
-
+    if graph:
+        i = np.array(xlist)
+        j = np.array(ylist)
+        plt.scatter(i, j)
+        plt.show()
     print("-------------GRAPH-SUMMARY----------------")
-    minheight = closest_to_zero(hdata)
-    indexforminheight = hdata.index(minheight)
-    print(f"Max Height: {max(hdata)}")
+    minheight = closest_to_zero(ylist)
+    indexforminheight = ylist.index(minheight)
+    print(f"Max Height: {max(ylist)}")
     print(f"The range and time at the height value closest to 0 at the given dt")
     print(
-        f"Height: {minheight}; Time: {timelist[indexforminheight]}; Range: {ddata[indexforminheight]}"
+        f"Height: {minheight}; Time: {timelist[indexforminheight]}; Range: {xlist[indexforminheight]}"
     )
 
 
@@ -57,13 +71,18 @@ def get_vals():
     time = 0
     dist = 0
     if graph.lower() == "y" or graph.lower() == "n":
-        return h, g, m, k, vi, angle, dt, endtime, graph
+        if graph.lower() == "y":
+            graph = True
+        else:
+            graph = False
+        return h, g, m, k, vi, angle, dt, endtime, graph, time, dist
     else:
         print("Rerun program and make (Y/n) = Y, y, N, or n")
 
 
 def main():
-    get_vals()
+    h, g, m, k, vi, angle, dt, endtime, graph, time, dist = get_vals()
+    euler(h, g, m, k, vi, angle, dt, endtime, graph, time, dist)
 
 
 if __name__ == "__main__":
