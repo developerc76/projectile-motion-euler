@@ -10,7 +10,7 @@ This is a purely theoretical simulation and I do not guarantee accuracy to the r
 #### How to use
 Input the initial values you would like to use for the simulation. Make sure python is installed on your system and the modules numpy, matplotlib, and prettytable are installed. 
 
-<i><em> How to install the required modules: </em><i>
+<i><em> How to install the required modules: </em></i>
 
 **Install using pip**
 
