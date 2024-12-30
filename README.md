@@ -13,15 +13,16 @@ Input the initial values you would like to use for the simulation. Make sure pyt
 
 #### Bash Terminal: 
 
-Make the files executable
+Make the files executable: 
     
-    cd /path/to/directory/projectile-motion-euler && chmod +x main_matplotlib.py && chmod +x main_turtle.py && chmod +x main_text.py
+    cd /path/to/directory/projectile-motion-euler
+    chmod +x main_matplotlib.py && chmod +x main_turtle.py && chmod +x main_text.py
     
 ##### To run: 
     
     ./main_<file_name>.py
 
-or
+##### or: 
 
     python main_<file_name>.py
 
@@ -37,11 +38,14 @@ The minimum delta time input for this simulation is 0.001 unless the round() dec
 ### Files
 
 main_matplotlib.py: 
+    
     Matplotlib and NumPy are used to get a more in-depth graph of different aspects of the motion such as velocity and acceleration, along with the range, height, and obviously time. 
 
 main_turtle.py: 
+    
     Using default turtle graphics to create a trajectory of the graph of a projectile. You can also get unformatted data. 
 
 main_text.py: 
+    
     Using prettytable to convert the data into a formatted table. 
 
