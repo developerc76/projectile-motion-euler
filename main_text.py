@@ -13,7 +13,7 @@ def closest_to_zero(nums):
             return num
 
 
-def printMethodAdvanced(h, g, m, k, vi, angle, dt, endtime, graph, time, dist):
+def printMethodAdvanced(h, g, m, k, vi, angle, dt, endtime, time, dist):
     vy = math.sin(math.radians(angle)) * vi
     vx = math.cos(math.radians(angle)) * vi
     xlist = []
@@ -72,7 +72,7 @@ def printMethodAdvanced(h, g, m, k, vi, angle, dt, endtime, graph, time, dist):
 
 def main():
     h, g, m, k, vi, angle, dt, endtime, graph, time, dist = main_matplotlib.get_vals()
-    printMethodAdvanced(h, g, m, k, vi, angle, dt, endtime, graph, time, dist)
+    printMethodAdvanced(h, g, m, k, vi, angle, dt, endtime, time, dist)
 
 
 if __name__ == "__main__":
