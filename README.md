@@ -11,7 +11,8 @@ This is a purely theoretical simulation and I do not guarantee accuracy to the r
 Input the initial values you would like to use for the simulation. Make sure python is installed on your system and the modules numpy, matplotlib, and prettytable are installed. 
 
 ##### How to install the required modules: 
-Install using pip
+
+**Install using pip**
 
 pip is the package manager for python
 
@@ -19,7 +20,7 @@ pip is the package manager for python
     pip install numpy
     pip install prettytable
 
-Install on Linux or BSD: 
+**Install on Linux or BSD:**
 
 I will use apt (Debian-based systems), but replace it to match the package manager used in your system (e.g. pacman on arch, dnf on fedora, pkg on bsd, etc. )
 
