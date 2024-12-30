@@ -28,10 +28,6 @@ def euler(h, g, m, k, vi, angle, dt, endtime, graph, time, dist):
     ax = -k * vx / m
 
     while time <= endtime:
-        if not graph:
-            print(
-                f"Time (s): {time}; Y-Acceleration (m/s^2): {ay}; Y-Velocity (m/s): {vy}; Height (m): {h}; X-Acceleration (m/s^2): {ax}; X-Velocity (m/s): {vx}; Range (m): {dist}"
-            )
         ylist.append(h)
         xlist.append(dist)
         timelist.append(time)
@@ -136,7 +132,7 @@ def get_vals():
     dt = float(input("Delta Time (s); if 1 then write 1.0: "))
     endtime = float(input("Endtime (s): "))
     graph = input(
-        "Would you like a graph? If not, then you will receive standard output (Y/n): "
+        "Would you like a graph? If not, then you will receive only a summary of the graph (Y/n): "
     )
     time = 0
     dist = 0
