@@ -1,4 +1,4 @@
-## Projectile Motion Simulation using Euler's Method
+### Projectile Motion Simulation using Euler's Method
 
 Note: 
 
@@ -7,7 +7,7 @@ This is only supported on newer versions of python (recommended at least 3.9)
 This is a purely theoretical simulation and I do not guarantee accuracy to the real world. 
 
 
-### How to use
+#### How to use
 Input the initial values you would like to use for the simulation. Make sure python is installed on your system and the modules numpy, matplotlib, and prettytable are installed. 
 
 
