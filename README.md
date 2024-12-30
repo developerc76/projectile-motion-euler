@@ -1,7 +1,12 @@
 ## Projectile Motion Simulation using Euler's Method
 
+### How to use
+Input the initial values you would like to use for the simulation. 
+
 ### Before you test it out...
 The minimum delta time input for this simulation is 0.001 unless the round() decimal place is changed. 
+
+Note that this is purely theoretical and I do not guarantee accuracy.
 
 ### Files
 
