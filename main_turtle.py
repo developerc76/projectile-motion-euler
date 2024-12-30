@@ -124,7 +124,7 @@ def createGraph(h, g, m, k, vi, angle, dt, endtime, time, dist):
     turtle.exitonclick()
 
 
-def euler():
+def get_vals_and_run_method():
     h = float(input("Initial height (m): "))
     g = float(input("Absolute Value of Gravity (m/s^2): ")) * (-1)
     m = float(input("Mass (kg): "))
@@ -147,7 +147,7 @@ def euler():
 
 
 def main():
-    euler()
+    get_vals_and_run_method()
 
 
 if __name__ == "__main__":
