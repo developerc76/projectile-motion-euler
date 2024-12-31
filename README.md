@@ -1,6 +1,6 @@
 ## Projectile Motion Simulation using Euler's Method
 
-Note: 
+### Disclaimer: 
 
 This is only supported on newer versions of python (recommended at least 3.9)
 
